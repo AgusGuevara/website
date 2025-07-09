@@ -23,6 +23,12 @@ type about = {
 
 export const jobs: jobs[] = [
     {
+        date: "10/2024-Present",
+        company: "Dymaxion Labs",
+        type: "Company Projects",
+        info: "At Dymaxion Labs, Im responsible of developing the front-end side of our applications. Dymaxion Labs specializes in creating value through the processing and understanding of geospatial data using big data and machine learning. My responsibilities include implementing precise UI/UX in our apps, maintaining current features, and introducing new functionalities. We utilize a range of technologies such as HTML, CSS, TypeScript, React, Angular, and Next.js, along with libraries and frameworks like deck.gl and turf.js for geospatial data visualization and manipulation.",
+    },
+    {
         date: "04/2022-07/2024",
         company: "Around | The broadcast revolution",
         type: "Client + Company Investments Projects",
@@ -32,7 +38,7 @@ export const jobs: jobs[] = [
     {
         date: "08/2021-04/2022",
         company: "Globant",
-        type: "Microservice",
+        type: "Microservices",
         info: "Worked with a fully remote team, for Disney, on a UI panel for a microservice called Xavier. Main tasks where to co-develop new features, as well as solve bugs in the application. Mainly worked with JavaScript, React, MaterialUI and some Node.js. Used Git and GitLab for versioning. jira for project tasks and tasks time tracking.",
     },
     {
