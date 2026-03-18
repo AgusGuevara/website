@@ -5,30 +5,30 @@ import About from "../Content/About";
 import Contact from "../Content/Contact";
 
 interface Props {
-    panel: string;
+  panel: string;
 }
 
 const renderBasedOnPanel = (panel: string): JSX.Element => {
-    switch (panel) {
-        case "work":
-            return <Work />;
-        case "tools":
-            return <Tools />;
-        case "about":
-            return <About />;
-        case "contact":
-            return <Contact />;
-        default:
-            return <Work />;
-    }
+  switch (panel) {
+    case "work":
+      return <Work />;
+    case "tools":
+      return <Tools />;
+    case "about":
+      return <About />;
+    case "contact":
+      return <Contact />;
+    default:
+      return <Work />;
+  }
 };
 
 const MainPanel: FC<Props> = ({ panel }) => {
-    return (
-        <div className="flex flex-row justify-center h-full w-full items-center p-4 order-2">
-            {renderBasedOnPanel(panel)}
-        </div>
-    );
+  return (
+    <div className="w-full flex-1 overflow-y-auto min-h-0">
+      {renderBasedOnPanel(panel)}
+    </div>
+  );
 };
 
 export default MainPanel;

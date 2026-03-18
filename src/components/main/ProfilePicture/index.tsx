@@ -1,11 +1,15 @@
 import profile from "@/assets/images/itsame.webp";
 
 const ProfilePicture: () => JSX.Element = () => {
-    return (
-        <div className="lg:w-[270px] w-[105px] h-28 lg:order-3 order-2 lg:h-auto">
-            <img src={profile} className="grayscale" alt="aguevara-pfp"></img>
-        </div>
-    );
+  return (
+    <div className="w-28 h-28 rounded-full overflow-hidden">
+      <img
+        src={profile}
+        className="grayscale w-full h-full object-cover"
+        alt="aguevara-pfp"
+      />
+    </div>
+  );
 };
 
 export default ProfilePicture;

@@ -1,13 +1,44 @@
 @font-face {
-    font-family: 'HomeVideo';
-    src: local('HomeVideo'),
-    url('./assets/fonts/HomeVideo.ttf') format("truetype");
+  font-family: "HomeVideo";
+  src:
+    local("HomeVideo"),
+    url("./assets/fonts/HomeVideo.ttf") format("truetype");
+}
+
+html,
+body {
+  height: 100%;
+  overflow: hidden;
 }
 
 div#root {
-    background-color: black;
+  height: 100%;
+  background-color: #09090b;
 }
 
 h1 {
-    color: white;
+  color: white;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #3f3f46;
+  border-radius: 0;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #71717a;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #3f3f46 transparent;
 }

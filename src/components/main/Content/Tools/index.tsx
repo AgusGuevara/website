@@ -2,42 +2,37 @@ import { tools } from "@/data/tools";
 import React from "react";
 
 const Tools: () => JSX.Element = () => {
-    return (
-        <div className="flex flex-row w-full h-auto gap-2 overflow-scroll lg:overflow-hidden lg:h-[95%]">
-            {tools.map(({ label, nodes }, id) => (
-                <div className="max-h-full w-full p-2" key={id}>
-                    <div className="pb-4">
-                        <h1 className="font-homeVideo">{label}</h1>
-                    </div>
-                    <div
-                        className="flex flex-col justify-start gap-4 overflow-scroll lg:overflow-hidden lg:h-full"
-                        key={label}
-                    >
-                        {nodes.map(
-                            ({ toolname, toolcomponent, experience }) => (
-                                <div
-                                    key={toolname}
-                                    className="flex flex-row justify-start content-center w-[95%] h-[50px] gap-2 p-3 bg-gray-200 rounded-md lg:h-auto"
-                                >
-                                    <span>
-                                        {React.cloneElement(toolcomponent, {
-                                            size: 30,
-                                        })}
-                                    </span>
-                                    <p className="pt-1 text-black font-homeVideo">
-                                        {toolname}
-                                    </p>
-                                    <p className="font-homeVideo text-gray-400 pt-2 text-xs overflow-hidden">
-                                        {experience}
-                                    </p>
-                                </div>
-                            )
-                        )}
-                    </div>
-                </div>
+  return (
+    <div className="flex flex-row flex-wrap gap-8 w-full">
+      {tools.map(({ label, nodes }, id) => (
+        <div className="flex-1 min-w-[180px]" key={id}>
+          <h2 className="font-homeVideo text-zinc-400 text-[13px] tracking-widest uppercase mb-4">
+            {label}
+          </h2>
+          <div className="flex flex-col gap-1">
+            {nodes.map(({ toolname, toolcomponent, experience }) => (
+              <div
+                key={toolname}
+                className="flex flex-row items-center gap-3 py-2 border-b border-zinc-800"
+              >
+                <span className="text-zinc-400">
+                  {React.cloneElement(toolcomponent, {
+                    size: 16,
+                  })}
+                </span>
+                <span className="font-homeVideo text-zinc-100 text-[13px]">
+                  {toolname}
+                </span>
+                <span className="font-homeVideo text-zinc-500 text-[11px] ml-auto">
+                  {experience}
+                </span>
+              </div>
             ))}
+          </div>
         </div>
-    );
+      ))}
+    </div>
+  );
 };
 
 export default Tools;
